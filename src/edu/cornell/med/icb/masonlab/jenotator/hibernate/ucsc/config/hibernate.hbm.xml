@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="edu.cornell.med.icb.masonlab.jenotator.hibernate.ucsc.model">
+	<class name="ChromInfo" table="chromInfo">
+		<id column="chrom" name="chrom" type="java.lang.String" length="255" />
+		<property column="size" name="size" type="java.lang.Long" not-null="true" />
+		<property column="fileName" name="fileName" type="java.lang.String" length="255" />
+	</class>
+	<class name="RefGene" table="refGene">
+		<id column="name" name="name" type="java.lang.String" length="255" />
+		<property column="bin" name="bin" type="java.lang.Integer" length="5" />
+		<property column="chrom" name="chrom" type="java.lang.String" length="255" />
+		<property column="strand" name="strand" type="java.lang.Character" length="1" />
+		<property column="txStart" name="txStart" type="java.lang.Integer" length="10" />
+		<property column="txEnd" name="txEnd" type="java.lang.Integer" length="10" />
+		<property column="cdsStart" name="cdsStart" type="java.lang.Integer" length="10" />
+		<property column="cdsEnd" name="cdsEnd" type="java.lang.Integer" length="10" />
+		<property column="exonCount" name="exonCount" type="java.lang.Integer" length="10" />
+		<property column="exonStarts" name="exonStarts" type="java.lang.String" />
+		<property column="exonEnds" name="exonEnds" type="java.lang.String" />
+		<property column="score" name="score" type="java.lang.Integer" length="11" />
+		<property column="name2" name="name2" type="java.lang.String" length="255" />
+		<property column="cdsStartStat" name="cdsStartStat" type="java.lang.String" length="255" />
+		<property column="cdsEndStat" name="cdsEndStat" type="java.lang.String" length="255" />
+		<property column="exonFrames" name="exonFrames" type="java.lang.String" length="255" />
+	</class>
+</hibernate-mapping>
